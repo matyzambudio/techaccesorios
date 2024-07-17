@@ -1,0 +1,111 @@
+/*Secciones Celulares y acccesorios */
+*{
+  
+    font-family: "Roboto", sans-serif;
+    font-weight: normal;
+    font-style: normal;
+  
+}
+.menuseccion {
+  color: white;
+  display: flex; /* Establecemos el contenedor como un flexbox */
+  justify-content: center; /* Centramos horizontalmente */
+  align-items: center; /* Centramos verticalmente */
+}
+.tituloseccion {
+  width: 100%;
+  background: black;
+  color: white;
+  text-align: center;
+  font-size: 25px;
+  font-weight: 20;
+  animation-name: modelo;
+  animation-duration: 7s;
+  animation-iteration-count: infinite;
+}
+@keyframes modelo {
+  0% {
+    transform: scale(0.7);
+    color: rgb(255, 255, 255);
+  }
+  25% {
+    transform: scale(0.9);
+    color: rgb(168, 168, 168, 0.4);
+  }
+  50% {
+    transform: scale(1);
+    color: rgb(153, 153, 153, 0.6);
+  }
+  75% {
+    transform: scale(0.8);
+    color: rgb(197, 194, 194, 0.8);
+  }
+  100% {
+    transform: scale(0); /* Aquí establecemos el tamaño original al finalizar */
+  }
+}
+.card {
+  border-radius:25px 0;
+  background: linear-gradient(to bottom, black, rgb(1, 79, 1));
+  padding-top: 5%;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.5),
+    0 0 20px rgba(255, 255, 255, 0.5), 0 0 40px rgba(255, 255, 255, 0.5),
+    0 0 35px white;
+}
+
+h3 {
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  text-transform: capitalize;
+}
+h4 {
+  width: 100%;
+  height: 20px;
+}
+.precio {
+  border-radius: 20px 0;
+  padding: 2px;
+  pointer-events: none;
+  text-align: center;
+  border-left: solid 1px rgb(5, 5, 5);
+  border-bottom: solid 2px rgb(5, 5, 5);
+  background-color: white;
+  animation-name: aniprecio;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+@keyframes aniprecio {
+  0% {
+    transform: scale(1.05);
+    color: rgb(5, 5, 5);
+  }
+  25% {
+    transform: scale(0.9);
+    color: rgb(168, 168, 168);
+  }
+  50% {
+    transform: scale(0.7);
+    color: rgb(54, 54, 54);
+  }
+  75% {
+    transform: scale(1);
+    color: rgb(5, 5, 5);
+  }
+}
+.card-text {
+
+  padding-top: 10px;
+  font-weight: 300;
+  font-size: 0px; /* Empieza con tamaño pequeño */
+  font-style: normal;
+  color: white;
+  text-transform: capitalize;
+  animation: anicarac 3s forwards;
+}
+
+@keyframes anicarac {
+  to {
+    font-size: 15px;
+  }
+}

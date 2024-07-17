@@ -1,0 +1,35 @@
+.contenedor-menu {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(200px, 1fr)); /* Cerrado el paréntesis que faltaba */
+  grid-gap: 2px; /* Espacio entre las tarjetas */
+  justify-content: space-evenly;
+}
+
+.styloTarjeta {
+  width: 80%;
+  height: 80%;
+  display: flex; /* Añadido display flex para justificar el contenido */
+  flex-direction: column; /* Columnas en lugar de filas */
+  justify-content: space-evenly;
+  padding: 20px;
+  border: 1px solid rgb(6, 181, 38);
+}
+
+.fotoTarjeta img {
+  width: 100%; /* Para asegurar que las imágenes ocupen todo el ancho de la tarjeta */
+  height: auto; /* Para mantener la proporción de la imagen */
+  border-radius: 20px 0 20px 0;
+  transition: transform 0.3s ease; /* Agregamos una transición para que el cambio de tamaño sea suave */
+}
+
+.fotoTarjeta img:hover {
+  transform: scale(1.05); /* Al pasar el cursor sobre la imagen, la escala aumenta en un 5% */
+}
+
+/* Ajustes para dispositivos móviles */
+@media only screen and (max-width: 768px) {
+  .contenedor-menu {
+    grid-template-columns: 1fr; /* Muestra una columna en pantalla de celular */
+  }
+}
